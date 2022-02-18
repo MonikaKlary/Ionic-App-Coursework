@@ -9,45 +9,95 @@
     <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
 
-    <title>index</title>
+    <link rel="stylesheet" href="app.css">
+
+    <title>About</title>
 </head>
 <body>
 
     <ion-app>
-        <ion-header>
-            <ion-toolbar color="primary">
+        <ion-menu side="start" content-id="main-content">
+            <ion-header>
+              <ion-toolbar>
+                <ion-title>Menu</ion-title>
+              </ion-toolbar>
+            </ion-header>
+            <ion-content>
+              <ion-list>
+                <ion-item>
+                  <ion-label><a href="">Home</a></ion-label>
+                </ion-item>
+  
+                <ion-item>
+                  <ion-label>About</ion-label>
+                </ion-item>
+  
+                <ion-item>
+                  <ion-label>Services</ion-label>
+                </ion-item>
+  
+                <ion-item>
+                  <ion-label>Daily Quote</ion-label>
+                </ion-item>
+  
+                <ion-item>
+                  <ion-label>Journal</ion-label>
+                </ion-item>
+  
+              </ion-list>
+            </ion-content>
+          </ion-menu>
+
+
+
+          <div class="ion-page" id="main-content">
+            <ion-header>
+              <ion-toolbar color="secondary">
+                <ion-buttons slot="start">
+                  <ion-menu-button></ion-menu-button>
+                </ion-buttons>
                 <ion-title>Gratitude Journal</ion-title>
-            </ion-toolbar>
-        </ion-header>
+              </ion-toolbar>
+            </ion-header>
 
-        <ion-content>
-            <ion-card>
 
+            <ion-card color="secondary">
+              <ion-card-content>
                 <ion-card-header >
-                    <h4>About The Gratitude Journal</h4>
+                  <h1>About The Gratitude Journal</h1>
                 </ion-card-header>
-
-                <ion-card-content>
-                    <ion-item>
-                        <ion-img src="images/aboutImg.jfif"></ion-img>
-                    </ion-item>
-                </ion-card-content>
-            </ion-card>
-
-            <ion-card>
-                <ion-card-content>
-                    <ion-textarea id="about-txt" rows="5" col="33">Is a digital journalling app that allows you to write your daily gratitudes without a need for a physical journal. It is an easy way to write down each day what you are grateful for at the same time helping to improve your mood.   
-                    </ion-textarea>
-                </ion-card-content>
-            </ion-card>  
-
-
+              </ion-card-content>
+            </ion-card> 
           
-           
-            
-        </ion-content>
+      
+            <ion-card color="secondary">
+              <ion-card-content>
+                  <ion-item>
+                      <ion-img src="images/aboutImg.jfif"></ion-img>
+                  </ion-item>
+              </ion-card-content>
+            </ion-card>
         
-    </ion-app> 
+            <ion-card color="secondary">
+              <ion-card-content>
+                <h2> Is a digital journalling app that allows you to write your daily gratitudes without a need for a physical journal. It is an easy way to write down each day what you are grateful for at the same time helping to improve your mood.  </h2>  
+              </ion-card-content>
+            </ion-card> 
     
+            <ion-card color="secondary">
+              <ion-card-content>
+                <p> Is a digital journalling app that allows you to write your daily gratitudes without a need for a physical journal. It is an easy way to write down each day what you are grateful for at the same time helping to improve your mood.  </p>  
+              </ion-card-content>
+            </ion-card>
+    
+            <ion-card color="secondary">
+              <ion-card-content>
+                <p> Is a digital journalling app that allows you to write your daily gratitudes without a need for a physical journal. It is an easy way to write down each day what you are grateful for at the same time helping to improve your mood.  </p>  
+              </ion-card-content>
+            </ion-card>
+    
+        </div>
+    </ion-app>
+
 </body>
 </html>
