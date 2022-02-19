@@ -1,4 +1,17 @@
 ion-content{
-    --ion-background-color: #9fdeec;
+    --ion-background-color: #b3edff;
 }
- 
+
+a{
+    text-decoration: none;
+    color: whitesmoke;
+    text-transform: uppercase;
+}
+
+ion-img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding: 5%;
+}
