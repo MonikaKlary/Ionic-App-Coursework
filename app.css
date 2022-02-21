@@ -8,14 +8,35 @@ a{
     text-transform: uppercase;
 }
 
-ion-img{
+/*ion-img{
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
     padding: 5%;
-}
+}*/
 
 ion-button{
     margin: 5%;
+}
+
+#homeImg{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding-top: 15%;
+    padding-bottom: 10%;
+}
+
+.bottomLogoImg{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 35%;
+    padding: 5%;
+}
+
+#btn-add-to-log{
+    --background: #b3edff;
 }

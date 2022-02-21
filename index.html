@@ -17,6 +17,7 @@
 
     
     <ion-app>
+      <!--The menu section-->
         <ion-menu side="start" content-id="main-content">
             <ion-header>
               <ion-toolbar color="secondary">
@@ -50,7 +51,7 @@
             </ion-content>
           </ion-menu>
 
-          
+          <!--The blue header bar wih the menu access button-->
           <ion-content class="ion-page" id="main-content">
             <ion-header>
               <ion-toolbar color="secondary">
@@ -61,14 +62,15 @@
               </ion-toolbar>
             </ion-header>
 
-            <ion-img src="images/logo.png"></ion-img>
+            <!--Brand Logo-->
+            <ion-img src="images/logo.png" id="homeImg"></ion-img>
      
         
-
-            <ion-button color="secondary" expand="block" size="large" shape="round">New List</ion-button>
-            <ion-button color="secondary" expand="block" size="large" shape="round">Add to List</ion-button>
+            <!--Button will take user to gratitude log page-->
+            <ion-button color="secondary" expand="block" size="large" shape="round"><a href="newUser.html">New List</a></ion-button>
+             <!--Button will take user to services page-->
+            <ion-button color="secondary" expand="block" size="large" shape="round"><a href="services.html">Services</a></ion-button>
            
-            
         </ion-content>
         
     </ion-app> 

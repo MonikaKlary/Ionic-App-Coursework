@@ -17,6 +17,7 @@
 <body>
     
     <ion-app>
+       <!--The menu section-->
       <ion-menu side="start" content-id="main-content">
         <ion-header>
           <ion-toolbar color="secondary">
@@ -50,27 +51,26 @@
         </ion-content>
       </ion-menu>
 
-
     
-            <ion-content class="ion-page" id="main-content">
-                <ion-header>
-                  <ion-toolbar color="secondary">
-                    <ion-buttons slot="start">
-                      <ion-menu-button></ion-menu-button>
-                    </ion-buttons>
-                    <ion-title>Gratitude Journal</ion-title>
-                  </ion-toolbar>
-                </ion-header>
+      <ion-content class="ion-page" id="main-content">
+            <ion-header>
+               <ion-toolbar color="secondary">
+                  <ion-buttons slot="start">
+                    <ion-menu-button></ion-menu-button>
+                  </ion-buttons>
+                <ion-title>Gratitude Journal</ion-title>
+                </ion-toolbar>
+        </ion-header>
 
-
+            <!--This box will display the userName and greet the user-->
             <ion-card>
-              <ion-card-header >
+              <ion-card-header color="secondary" >
                     <h1>Hello UserName!</h1>
                 </ion-card-header>
                </ion-card-content>
             </ion-card>
     
-            
+            <!--The user will be able to input a gratitude here which then will be stored in the list below-->
             <ion-card color="secondary">
                 <ion-card-header >
                     <h1>Today I am grateful for:</h1>
@@ -82,7 +82,7 @@
                     </ion-card-content>
                 </ion-card>  
             
-                    <ion-button id="btn-add-to-log" color="primary" expand="block" size="large" shape="round">Add</ion-button>
+                    <ion-button id="btn-add-to-log" expand="block" size="large" shape="round">Add</ion-button>
 
                     <ion-card>
                         <ion-card-header >
@@ -94,6 +94,9 @@
                      </ion-card>
 
                      </ion-card>
+
+                     <ion-img src="images/logo.png" class="bottomLogoImg"></ion-img>
+
             </ion-content>
         
 

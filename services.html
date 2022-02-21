@@ -16,6 +16,7 @@
 <body>
 
     <ion-app>
+         <!--The menu section-->
         <ion-menu side="start" content-id="main-content">
             <ion-header>
               <ion-toolbar color="secondary">
@@ -61,8 +62,8 @@
             </ion-header>
 
      
-            <ion-card>
-                <ion-card-header >
+            <ion-card color="secondary">
+                <ion-card-header>
                     <h1>Find Your Local Mental Health Services</h1>
                 </ion-card-header>
                 </ion-card-content>
@@ -70,12 +71,13 @@
 
             <ion-card color="secondary">
                 <ion-card-content>
-                    <ion-item>
-                        <img src="images/map.JPG"></ion-img>
-                    </ion-item>
+                      <!--At the moment the map is just a placeholder map-->
+                      <iframe src="https://cartes.io/embeds/maps/1e62469f-d9ff-4e17-bf2f-f8f83d1af04f?type=map" width="100%" height="400" frameborder="0"></iframe>
                 </ion-card-content>
               </ion-card>
            
+              <ion-img src="images/logo.png" class="bottomLogoImg"></ion-img>
+
         </ion-content>
         </ion-app>
     
