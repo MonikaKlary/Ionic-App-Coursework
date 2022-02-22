@@ -8,14 +8,6 @@ a{
     text-transform: uppercase;
 }
 
-/*ion-img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    padding: 5%;
-}*/
-
 ion-button{
     margin: 5%;
 }
@@ -38,5 +30,9 @@ ion-button{
 }
 
 #btn-add-to-log{
+    --background: #b3edff;
+}
+
+#btn-new-list{
     --background: #b3edff;
 }
