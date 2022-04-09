@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
     <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
@@ -11,10 +21,11 @@
 
     <link rel="stylesheet" href="app.css">
 
-    <title>index</title>
+    <title>welcome</title>
 </head>
 <body>
 
+    
     <ion-app>
         <ion-menu side="start" content-id="main-content">
             <ion-header>
@@ -60,28 +71,35 @@
               </ion-toolbar>
             </ion-header>
 
-     
+
+      
             <ion-card color="secondary">
-                <ion-card-header >
-                    <h1 id="quote-hello">Hello UserName!</h1>
+                <ion-card-header>
+                    <h4>Enter Name:</h4>
                 </ion-card-header>
+                
+                <ion-card-content>    
+                    <ion-item>
+                        <ion-label position="floating"></ion-label>
+                        <ion-input type="string" id="userName"></ion-input>
+                    </ion-item>
+
                 </ion-card-content>
+                    <ion-button id="btn-new-user" expand="block" size="large" shape="round"><a href="gratitudeLog.html">Confirm</a></ion-button>
             </ion-card>
 
-            <!--A daily quote API will be integrated here-->
-            <ion-card color="secondary">
-                <ion-card-content>
-                    <ion-textarea id="txt-initial" rows="5" col="33">Inspirational Quote</ion-textarea>
-                </ion-card-content>
-            </ion-card> 
-
+    
             <ion-img src="images/logo.png" class="bottomLogoImg"></ion-img>
            
+            
         </ion-content>
-        </ion-app>
-    
+        
+    </ion-app> 
 
-        <script src="quotePage.js"></script>
+ 
+
+</body>
+</html>
 
 </body>
 </html>
