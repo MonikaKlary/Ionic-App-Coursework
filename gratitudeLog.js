@@ -9,10 +9,17 @@ usernameLabel.textContent = "Hello " + localStorage.getItem('Username');
 addGratitudeBtn.addEventListener('click', addItemToList);
 clearLogBtn.addEventListener('click', clearGratitudeLog);
 
-let storedEntries = localStorage.getItem('StoredGratitudes');
-if ( storedEntries == null )
+//Local storage stores the array as just one string,
+//we can convert it back into an array by splitting the string after each ','
+let storedEntriesArray;
+let storedEntriesString = localStorage.getItem('StoredGratitudes');
+if ( storedEntriesString == null )
 {
-    storedEntries = [];
+    storedEntriesArray = [];
+}
+else
+{
+    storedEntriesArray = storedEntriesString.split(',');
 }
 
 loadList();
@@ -21,9 +28,9 @@ loadList();
 function loadList()
 {
     //loop backwards over the stored list to add them in order
-    for ( let i = storedEntries.length - 1; i >= 0; i--)
+    for ( let i = storedEntriesArray.length - 1; i >= 0; i--)
     {
-        let currentEntry = storedEntries[i];
+        let currentEntry = storedEntriesArray[i];
 
         //hack to get around the , being added to the HTML list for some reason?
         if ( currentEntry != ',')
@@ -48,12 +55,12 @@ function addItemToList()
         clearInput();
 
         //add new item to our list stored in local storage
-        storedEntries.unshift(inputValue);
+        storedEntriesArray.unshift(inputValue);
 
         //If more than 7 entries in the stored list then we need to remove it from the HTML and the stored list
-        if ( storedEntries.length > 7 )
+        if ( storedEntriesArray.length > 7 )
         {
-            storedEntries.pop();
+            storedEntriesArray.pop();
             gratitudeList.removeChild( gratitudeList.lastChild );
         }
 
@@ -61,7 +68,7 @@ function addItemToList()
         gratitudeList.prepend(newItem);
 
         //save our stored list
-        localStorage.setItem('StoredGratitudes', storedEntries);
+        localStorage.setItem('StoredGratitudes', storedEntriesArray);
     }
     else
     {
@@ -76,13 +83,13 @@ function clearInput()
 
 function clearGratitudeLog()
 {
-    storedEntries = [];
+    storedEntriesArray = [];
 
     while(gratitudeList.firstChild)
     {
         gratitudeList.removeChild(gratitudeList.firstChild);
     }
 
-    localStorage.setItem('StoredGratitudes', storedEntries);
+    localStorage.setItem('StoredGratitudes', storedEntriesArray);
 
 };

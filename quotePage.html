@@ -11,6 +11,8 @@
 
     <link rel="stylesheet" href="app.css">
 
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    
     <title>index</title>
 </head>
 <body>
@@ -71,12 +73,11 @@
             <!--A daily quote API will be integrated here-->
             <ion-card color="secondary">
                 <ion-card-content>
-                    <ion-textarea id="txt-initial" rows="5" col="33">Inspirational Quote</ion-textarea>
+                    <ion-textarea id="quote-display" rows="5" col="33">Inspirational Quote</ion-textarea>
                 </ion-card-content>
             </ion-card> 
 
             <ion-img src="images/logo.png" class="bottomLogoImg"></ion-img>
-           
         </ion-content>
         </ion-app>
     

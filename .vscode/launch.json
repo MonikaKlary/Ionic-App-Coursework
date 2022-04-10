@@ -7,8 +7,8 @@
         {
             "type": "pwa-chrome",
             "request": "launch",
-            "name": "Launch index.html",
-            "file": "${workspaceFolder}/index.html"
+            "name": "Launch services.html",
+            "file": "${workspaceFolder}/services.html"
         }
     ]
 }

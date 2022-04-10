@@ -11,6 +11,8 @@
 
     <link rel="stylesheet" href="app.css">
 
+    <script src="services.js"></script>
+
     <title>Services</title>
 </head>
 <body>
@@ -70,9 +72,17 @@
             </ion-card>
 
             <ion-card color="secondary">
+
+              <ion-button id="current-location-btn">Current Location</ion-button>
                 <ion-card-content>
                       <!--At the moment the map is just a placeholder map-->
-                      <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d17316.222308123095!2d-2.1199160749612003!3d57.14513480112298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1stherapy!5e0!3m2!1sen!2suk!4v1645609205389!5m2!1sen!2suk" width="400" height="225" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                      <div id="map"></div>
+
+                      <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+                      <script
+                        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBfFj48NLb1mAAyRHsW8CDYiLvg8QB8u8&libraries=places&callback=createMap&v=weekly"
+                        async
+                      ></script>
                 </ion-card-content>
               </ion-card>
            
