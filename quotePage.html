@@ -62,20 +62,29 @@
               </ion-toolbar>
             </ion-header>
 
-     
+            <!--User is greeted by their name in this section and can read what the page is about-->
             <ion-card color="secondary">
                 <ion-card-header >
                     <h1 id="quote-hello">Hello UserName!</h1>
+                      <p>On this page you will find quotes that can provide inspiration or prompt reflection for you personal journey to improved wellbeing.</p>
                 </ion-card-header>
                 </ion-card-content>
             </ion-card>
 
-            <!--A daily quote API will be integrated here-->
-            <ion-card color="secondary">
+                
+            <!--A random quotes API-->
+            <ion-card >
                 <ion-card-content>
                     <ion-textarea id="quote-display" rows="5" col="33">Inspirational Quote</ion-textarea>
-                </ion-card-content>
+                  
+                    <img src="images/quotes.jpg" id="quotesImg"></ion-img>
+                  
+                  </ion-card-content>
             </ion-card> 
+
+           
+           
+         
 
             <ion-img src="images/logo.png" class="bottomLogoImg"></ion-img>
         </ion-content>
