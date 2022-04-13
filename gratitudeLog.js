@@ -10,7 +10,7 @@ addGratitudeBtn.addEventListener('click', addItemToList);
 clearLogBtn.addEventListener('click', clearGratitudeLog);
 
 //Local storage stores the array as just one string,
-//we can convert it back into an array by splitting the string after each ','
+//It can be converted back into an array by splitting the string after each ','
 let storedEntriesArray;
 let storedEntriesString = localStorage.getItem('StoredGratitudes');
 if ( storedEntriesString == null )
@@ -32,12 +32,12 @@ function loadList()
     {
         let currentEntry = storedEntriesArray[i];
 
-        //hack to get around the , being added to the HTML list for some reason?
+        //hack to get around the , being added to the HTML list for some reason
         if ( currentEntry != ',')
         {
             let newItem = document.createElement('ion-item');
             newItem.textContent = currentEntry;
-            //add new HTML child at start of list
+            //adds new HTML child at the start of the list
             gratitudeList.prepend(newItem);
         }
     }
@@ -49,12 +49,12 @@ function addItemToList()
 
     if ( inputValue != "" )
     {
-        //add new item visually to list
+        //adds new item visually to the list
         let newItem = document.createElement('ion-item');
         newItem.textContent = inputValue;
         clearInput();
 
-        //add new item to our list stored in local storage
+        //adds new item to the list stored in local storage
         storedEntriesArray.unshift(inputValue);
 
         //If more than 7 entries in the stored list then we need to remove it from the HTML and the stored list
@@ -67,7 +67,7 @@ function addItemToList()
         //add new HTML child at start of list
         gratitudeList.prepend(newItem);
 
-        //save our stored list
+        //save stored list
         localStorage.setItem('StoredGratitudes', storedEntriesArray);
     }
     else

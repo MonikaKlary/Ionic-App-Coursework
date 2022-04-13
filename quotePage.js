@@ -3,7 +3,7 @@ const quoteDisplay = document.getElementById('quote-display');
 
 const api_url = "https://api.quotable.io/random";
 
-//fetch response from API in JSON
+//fetch response from API
 function getJson(aResponse)
 {
     return aResponse.json();
@@ -12,7 +12,6 @@ function getJson(aResponse)
 function displayQuoteData( quoteData )
 {
     quoteWelcome.textContent = "Hello " + localStorage.getItem('Username');
-    //quoteDisplay.textContent = quoteData.content;
 
     quoteDisplay.textContent = quoteData.content + " - " + quoteData.author;
 }

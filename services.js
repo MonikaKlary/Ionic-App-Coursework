@@ -14,7 +14,7 @@ function createMap() {
   locationButton.classList.add("custom-map-control-button");
   map.controls[google.maps.ControlPosition.TOP_CENTER].push(locationButton);
   locationButton.addEventListener("click", () => {
-    // Try HTML5 geolocation.
+
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         (position) => {
